@@ -1,15 +1,40 @@
-# FedFST: Mitigating Spectral Catastrophic Forgetting in Federated  Graph Continual Learning
+# İleri Yapay Zeka WarmUP Ödev 2
 
-# Abstract:
-Federated Graph Learning (FGL) enables privacy-preserving GNN training over distributed graph data, yet dynamic task streams in Federated Graph Continual Learning (FGCL) inevitably lead to catastrophic forgetting. From a spectral perspective, this forgetting manifests as two fundamental challenges: high-frequency inconsistency forgetting, where newly emerging node inconsistencies disrupt message passing and erase discriminative knowledge, and low-frequency consistency forgetting, where over-adaptation to new tasks dilutes global semantic coherence. Existing FGCL methods fail to explicitly address these dual spectral issues, resulting in severe degradation of knowledge retention and task generalization across continual learning stages.
-To this end, we propose FedFST, a spectral-aware framework that mitigates dual spectral forgetting. FedFST comprises Historical High-Frequency Knowledge Restoration (HHKR) to reconstruct and preserve high-frequency inconsistency knowledge and Historical Low-Frequency Semantic Transfer (HLST) to stabilize low-frequency consistency via spectral distillation. Extensive experiments demonstrate the effectiveness of FedFST in alleviating catastrophic forgetting in FGCL.
+Enes Can · 20 Ekim 2026
 
-## Motivation
+Bu çalışma, FedFST kaynak kodunu Google Colab'da çalıştırır; Cora, Citeseer, Actor,
+Minesweeper ve Squirrel üzerinde POWER ve FedSPA ile karşılaştırır.
 
-The motivation figure is directly extracted from the paper motivation PDF.
+[Google Colab defteri](https://colab.research.google.com/drive/1qHrH63OOxe9LtjzCw__zTgEOJPsuzIdN)
 
-![Motivation of FedFST](assets/motivation.png)
+Ana teslim dosyası `Ileri_YZ_Odev2_EnesCan_FedFST_POWER_FedSPA.ipynb` dosyasıdır.
+Kurulum ve uyarlama kodları, gerçek eğitim çıktıları, doğruluk matrisleri,
+AA ve AF karşılaştırmaları ile grafikler notebook'un içindedir.
+Colab'da **Çalışma zamanı → Tümünü çalıştır** seçilerek tekrar yürütülebilir.
+Defter tüm kodu içerir; bu klasördeki Python dosyalarını ayrıca yüklemek gerekmez.
 
-## Citation
+## Deney kapsamı
 
-FedFST: Mitigating Spectral Catastrophic Forgetting in Federated Graph Continual Learning. SIGKDD 2026. Hanyao Guo, Zihan Tan, Wenke Huang, Bin Yang, and Mang Ye.
+- Beş gerçek veri seti ve üç yöntem ile 15 deney.
+- Louvain ile üç istemci, sınıf bazında yaklaşık %60/%20/%20 bölme.
+- Ortak bölmeler, sabit tohum 24, görev başına 10 tur ve tur başına 3 yerel adım.
+- Bütün sınıflar korunur; son eksik sınıf grubu atılmaz.
+- Minesweeper tek görevli olduğu için bu veri setinde AF tanımsızdır.
+- FedSPA'nın özgün model ve birleştirme kodu aynı görev akışına uyarlanmıştır.
+- Yardımcı eğitim bütçeleri azaltılmıştır. Bu deney makale tablolarının birebir
+  yeniden üretimi veya istatistiksel üstünlük iddiası değildir.
+
+Kaynak sürümleri, gerekli yamalar ve deneyin sınırları notebook'ta açıklanmıştır.
+POWER'ın GitHub bağlantısı erişilemediğinden makalenin resmî
+[Zenodo arşivi](https://zenodo.org/records/15487655) kullanılır.
+
+## Dosyalar
+
+- `prepare_sources.py`: sabit kaynak sürümlerini indirme ve çalıştırılabilirlik yamaları.
+- `experiment_common.py`: veri setleri, görevler, bölmeler ve metrikler.
+- `run_experiment.py`: özgün yöntem sınıflarını kullanan deney çalıştırıcısı.
+- `results_summary.csv`: Colab koşusunun özet metrikleri.
+- `FedFST_Odev2_deney_kanitlari.zip`: ayrıntılı loglar, ham metrikler ve ortam kaydı.
+
+Öğretim üyelerine paylaşım yetkisi öğrenci tarafından ayrıca verilecektir.
+Üst dizindeki özgün FedFST README dosyası kaynak projenin açıklamasıdır.

@@ -1,0 +1,15 @@
+# FedFST: Mitigating Spectral Catastrophic Forgetting in Federated  Graph Continual Learning
+
+# Abstract:
+Federated Graph Learning (FGL) enables privacy-preserving GNN training over distributed graph data, yet dynamic task streams in Federated Graph Continual Learning (FGCL) inevitably lead to catastrophic forgetting. From a spectral perspective, this forgetting manifests as two fundamental challenges: high-frequency inconsistency forgetting, where newly emerging node inconsistencies disrupt message passing and erase discriminative knowledge, and low-frequency consistency forgetting, where over-adaptation to new tasks dilutes global semantic coherence. Existing FGCL methods fail to explicitly address these dual spectral issues, resulting in severe degradation of knowledge retention and task generalization across continual learning stages.
+To this end, we propose FedFST, a spectral-aware framework that mitigates dual spectral forgetting. FedFST comprises Historical High-Frequency Knowledge Restoration (HHKR) to reconstruct and preserve high-frequency inconsistency knowledge and Historical Low-Frequency Semantic Transfer (HLST) to stabilize low-frequency consistency via spectral distillation. Extensive experiments demonstrate the effectiveness of FedFST in alleviating catastrophic forgetting in FGCL.
+
+## Motivation
+
+The motivation figure is directly extracted from the paper motivation PDF.
+
+![Motivation of FedFST](assets/motivation.png)
+
+## Citation
+
+FedFST: Mitigating Spectral Catastrophic Forgetting in Federated Graph Continual Learning. SIGKDD 2026. Hanyao Guo, Zihan Tan, Wenke Huang, Bin Yang, and Mang Ye.

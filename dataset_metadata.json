@@ -1,0 +1,72 @@
+[
+  {
+    "Veri seti":"cora",
+    "Düğüm":2708,
+    "Kenar yönlü":10556,
+    "Özellik":1433,
+    "Sınıf":7,
+    "Görev":4,
+    "İstemci düğümleri":[
+      903,
+      903,
+      902
+    ],
+    "Bölme SHA256":"7f4e5f7cde4604a0790aceb1696e5c3f8f58edfe2f864016304592b6db15b1bb"
+  },
+  {
+    "Veri seti":"citeseer",
+    "Düğüm":3327,
+    "Kenar yönlü":9104,
+    "Özellik":3703,
+    "Sınıf":6,
+    "Görev":3,
+    "İstemci düğümleri":[
+      1109,
+      1109,
+      1109
+    ],
+    "Bölme SHA256":"0237f9442400111192ede7e951d1b53172bbd415b51552b3b1dfa4a013a0f0ff"
+  },
+  {
+    "Veri seti":"actor",
+    "Düğüm":7600,
+    "Kenar yönlü":53411,
+    "Özellik":932,
+    "Sınıf":5,
+    "Görev":3,
+    "İstemci düğümleri":[
+      2534,
+      2533,
+      2533
+    ],
+    "Bölme SHA256":"5c1997908be5525d098d3bb98e6922b35da5e3247c76c5ccc3a797e313c2a8c2"
+  },
+  {
+    "Veri seti":"minesweeper",
+    "Düğüm":10000,
+    "Kenar yönlü":78804,
+    "Özellik":7,
+    "Sınıf":2,
+    "Görev":1,
+    "İstemci düğümleri":[
+      3407,
+      3172,
+      3421
+    ],
+    "Bölme SHA256":"b43c6e9082be598db12499817ff361682d1ff9df4e0cc09b2c37c4d29f39d6c8"
+  },
+  {
+    "Veri seti":"squirrel",
+    "Düğüm":5201,
+    "Kenar yönlü":396846,
+    "Özellik":2089,
+    "Sınıf":5,
+    "Görev":3,
+    "İstemci düğümleri":[
+      1724,
+      1729,
+      1748
+    ],
+    "Bölme SHA256":"30f7c52e1b16782ef32a1518791380c2f4a348ada9f651d7ed4747b9645b451b"
+  }
+]
